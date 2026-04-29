@@ -3,134 +3,88 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PureGlow</title>
+<title>PureGlow Smile</title>
 
 <style>
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: Arial;
     background: #0f0f0f;
     color: white;
+    text-align: center;
 }
 
-/* HEADER */
-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 40px;
-    background: #111;
-}
-
-header h1 {
-    color: #f48fb1;
-}
-
-/* INTRO LOGO */
-.intro {
+/* HERO */
+.hero {
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #000;
 }
 
-.circle-intro {
+.glow {
     width: 180px;
     height: 180px;
     border-radius: 50%;
     background: #111;
     display: flex;
-    justify-content: center;
     align-items: center;
-    font-size: 28px;
-    box-shadow:
-        0 0 40px #f48fb1,
-        0 0 80px #f48fb1,
-        0 0 120px #f48fb1;
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.08); }
-    100% { transform: scale(1); }
-}
-
-/* HERO */
-.hero {
-    text-align: center;
-    padding: 60px 20px;
-}
-
-/* PRODUCTS */
-.products {
-    display: flex;
     justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-    padding: 60px 20px;
+    box-shadow: 0 0 60px #a855f7, 0 0 120px #a855f7;
+    margin-bottom: 20px;
 }
 
-/* CARD GLOW */
-.card {
-    position: relative;
-    width: 300px;
-    height: 420px;
-    background: #111;
-    border-radius: 20px;
-    overflow: hidden;
+/* TEXT */
+h1 {
+    font-size: 40px;
 }
 
-.circle {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    background: #f48fb1;
-    border-radius: 50%;
-    top: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    box-shadow: 0 0 60px #f48fb1, 0 0 120px #f48fb1;
-}
-
-.logo {
-    width: 80px;
-}
-
-.product_img {
-    position: absolute;
-    width: 160px;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.content {
-    position: absolute;
-    top: 230px;
-    text-align: center;
-    width: 100%;
-    padding: 0 20px;
-}
-
-.content p {
-    font-size: 14px;
+p {
     color: #ccc;
 }
 
-.content a {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background: #f48fb1;
-    border-radius: 20px;
+/* BUTTON */
+button {
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: #a855f7;
+    border: none;
+    border-radius: 30px;
     color: white;
-    text-decoration: none;
+    font-size: 16px;
+}
+
+/* PRODUCT */
+.product {
+    padding: 60px 20px;
+}
+
+.card {
+    background: #111;
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 300px;
+    margin: auto;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.price {
+    color: #a855f7;
+    font-size: 24px;
+}
+
+/* SECTION */
+.section {
+    padding: 60px 20px;
 }
 
 /* FOOTER */
 footer {
-    text-align: center;
     padding: 20px;
     background: #111;
 }
@@ -139,50 +93,40 @@ footer {
 
 <body>
 
-<header>
-    <h1>PureGlow</h1>
-</header>
-
-<!-- INTRO -->
-<section class="intro">
-    <div class="circle-intro">PureGlow</div>
-</section>
-
 <!-- HERO -->
 <section class="hero">
-    <h2>Révèle ton glow naturel ✨</h2>
-    <p>Une peau propre, douce et lumineuse</p>
+    <div class="glow">✨</div>
+    <h1>PureGlow Smile</h1>
+    <p>Un sourire plus éclatant instantanément</p>
+    <button onclick="scrollTo({top:800,behavior:'smooth'})">
+        Découvrir
+    </button>
 </section>
 
-<!-- PRODUITS -->
-<section class="products">
-
-    <!-- CARD 1 -->
+<!-- PRODUIT -->
+<section class="product">
     <div class="card">
-        <div class="circle"></div>
-
-        <div class="content">
-            <h2>PureGlow Pro</h2>
-            <p>Brosse nettoyante haut de gamme pour une peau parfaite.</p>
-            <a href="#">29,99€</a>
-        </div>
-
-        <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=300" class="product_img">
+        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5">
+        <h2>Poudre Blanchissante Violette</h2>
+        <p>Corrige instantanément les tons jaunes pour un sourire plus lumineux.</p>
+        <p class="price">9,99€</p>
+        <button>Acheter</button>
     </div>
+</section>
 
-    <!-- CARD 2 -->
-    <div class="card">
-        <div class="circle"></div>
+<!-- AVANTAGES -->
+<section class="section">
+    <h2>Pourquoi ça marche ?</h2>
+    <p>✔ Neutralise le jaune<br>
+       ✔ Effet immédiat<br>
+       ✔ Facile à utiliser<br>
+       ✔ Portable</p>
+</section>
 
-        <div class="content">
-            <h2>PureGlow Mini</h2>
-            <p>Compacte et idéale pour les voyages.</p>
-            <a href="#">19,99€</a>
-        </div>
-
-        <img src="https://images.unsplash.com/photo-1600180758890-6b94519a8ba1?w=300" class="product_img">
-    </div>
-
+<!-- CTA -->
+<section class="section">
+    <h2>Essaye maintenant</h2>
+    <button>Acheter maintenant</button>
 </section>
 
 <footer>
