@@ -9,129 +9,142 @@
 body {
     margin: 0;
     font-family: Arial;
-    background: #0f0f0f;
+    background: #0a0a0a;
     color: white;
-    text-align: center;
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #a855f7;
 }
 
 /* HERO */
 .hero {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.glow {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    background: #111;
     display: flex;
     align-items: center;
-    justify-content: center;
-    box-shadow: 0 0 60px #a855f7, 0 0 120px #a855f7;
-    margin-bottom: 20px;
+    justify-content: space-around;
+    padding: 60px 20px;
+    flex-wrap: wrap;
 }
 
-/* TEXT */
-h1 {
+.hero-text {
+    max-width: 400px;
+}
+
+.hero-text h1 {
     font-size: 40px;
 }
 
-p {
-    color: #ccc;
+.hero-text span {
+    color: #a855f7;
 }
 
-/* BUTTON */
-button {
+.btn {
     margin-top: 20px;
     padding: 12px 30px;
-    background: #a855f7;
+    background: linear-gradient(45deg,#a855f7,#ec4899);
     border: none;
     border-radius: 30px;
     color: white;
-    font-size: 16px;
 }
 
-/* PRODUCT */
-.product {
-    padding: 60px 20px;
-}
-
-.card {
-    background: #111;
-    padding: 30px;
-    border-radius: 20px;
-    max-width: 300px;
-    margin: auto;
-}
-
-.card img {
-    width: 100%;
-    border-radius: 15px;
-}
-
-.price {
-    color: #a855f7;
-    font-size: 24px;
+/* IMAGE */
+.hero img {
+    width: 280px;
 }
 
 /* SECTION */
 .section {
-    padding: 60px 20px;
+    padding: 50px 20px;
+    text-align: center;
 }
 
-/* FOOTER */
-footer {
-    padding: 20px;
+/* AVANT APRES */
+.before-after img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+/* INGREDIENTS */
+.ingredients {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.ingredients img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+/* CTA */
+.cta {
     background: #111;
+    padding: 40px;
+    text-align: center;
+}
+
+.price {
+    color: #a855f7;
+    font-size: 28px;
 }
 </style>
 </head>
 
 <body>
 
+<nav>
+    <div class="logo">Pure<span>Glow</span></div>
+    <button class="btn">Commander</button>
+</nav>
+
 <!-- HERO -->
 <section class="hero">
-    <div class="glow">✨</div>
-    <h1>PureGlow Smile</h1>
-    <p>Un sourire plus éclatant instantanément</p>
-    <button onclick="scrollTo({top:800,behavior:'smooth'})">
-        Découvrir
-    </button>
+    <div class="hero-text">
+        <h1>Poudre blanchissante <span>Violette 5D</span></h1>
+        <p>Un sourire plus blanc instantanément ✨</p>
+        <button class="btn">Acheter maintenant</button>
+    </div>
+
+    <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5">
 </section>
 
-<!-- PRODUIT -->
-<section class="product">
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5">
-        <h2>Poudre Blanchissante Violette</h2>
-        <p>Corrige instantanément les tons jaunes pour un sourire plus lumineux.</p>
-        <p class="price">9,99€</p>
-        <button>Acheter</button>
+<!-- RESULTAT -->
+<section class="section">
+    <h2>Résultats visibles</h2>
+    <div class="before-after">
+        <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db">
     </div>
 </section>
 
-<!-- AVANTAGES -->
+<!-- INGREDIENTS -->
 <section class="section">
-    <h2>Pourquoi ça marche ?</h2>
-    <p>✔ Neutralise le jaune<br>
-       ✔ Effet immédiat<br>
-       ✔ Facile à utiliser<br>
-       ✔ Portable</p>
+    <h2>Ingrédients naturels</h2>
+    <div class="ingredients">
+        <img src="https://images.unsplash.com/photo-1587049352846-4a222e784d38">
+        <img src="https://images.unsplash.com/photo-1582719478181-2c72b5a4c58c">
+        <img src="https://images.unsplash.com/photo-1615485737651-cb9d6e1fbe7b">
+    </div>
 </section>
 
 <!-- CTA -->
-<section class="section">
-    <h2>Essaye maintenant</h2>
-    <button>Acheter maintenant</button>
+<section class="cta">
+    <h2>Prêt à avoir un sourire parfait ?</h2>
+    <p class="price">19,99€</p>
+    <button class="btn">Commander maintenant</button>
 </section>
-
-<footer>
-    <p>© 2026 PureGlow</p>
-</footer>
 
 </body>
 </html>
