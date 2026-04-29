@@ -1,1 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>PureGlow - Brosse Visage</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            color: #333;
+        }
 
+        header {
+            background-color: #f8c8dc;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            color: #fff;
+        }
+
+        nav {
+            background-color: #fff;
+            text-align: center;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #f48fb1;
+            font-weight: bold;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 50px;
+            background-color: #ffe4ec;
+        }
+
+        .hero h2 {
+            font-size: 2em;
+        }
+
+        .products {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 40px;
+            flex-wrap: wrap;
+        }
+
+        .product {
+            border: 1px solid #eee;
+            border-radius: 10px;
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+        }
+
+        .product img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .product button {
+            background-color: #f48fb1;
+            color: white;
+            border: none;
+            padding: 10px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f8c8dc;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>PureGlow</h1>
+    <p>Révélez l'éclat naturel de votre peau</p>
+</header>
+
+<nav>
+    <a href="#">Accueil</a>
+    <a href="#">Produits</a>
+    <a href="#">Contact</a>
+</nav>
+
+<section class="hero">
+    <h2>Brosses nettoyantes visage</h2>
+    <p>Une peau propre, douce et lumineuse chaque jour ✨</p>
+</section>
+
+<section class="products">
+    <div class="product">
+        <img src="https://via.placeholder.com/250" alt="Brosse visage">
+        <h3>Brosse PureGlow Pro</h3>
+        <p>Nettoyage en profondeur</p>
+        <p><strong>29,99€</strong></p>
+        <button>Acheter</button>
+    </div>
+
+    <div class="product">
+        <img src="https://via.placeholder.com/250" alt="Brosse visage">
+        <h3>Brosse PureGlow Mini</h3>
+        <p>Compacte et pratique</p>
+        <p><strong>19,99€</strong></p>
+        <button>Acheter</button>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 PureGlow - Tous droits réservés</p>
+</footer>
+
+</body>
+</html>
