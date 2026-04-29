@@ -1,128 +1,178 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>PureGlow - Brosse Visage</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #fff;
-            color: #333;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PureGlow</title>
 
-        header {
-            background-color: #f8c8dc;
-            padding: 20px;
-            text-align: center;
-        }
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f0f0f;
+    color: white;
+}
 
-        header h1 {
-            margin: 0;
-            color: #fff;
-        }
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: rgba(0,0,0,0.8);
+    position: sticky;
+    top: 0;
+}
 
-        nav {
-            background-color: #fff;
-            text-align: center;
-            padding: 10px;
-            border-bottom: 1px solid #eee;
-        }
+header h1 {
+    color: #f48fb1;
+}
 
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #f48fb1;
-            font-weight: bold;
-        }
+nav a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+}
 
-        .hero {
-            text-align: center;
-            padding: 50px;
-            background-color: #ffe4ec;
-        }
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
 
-        .hero h2 {
-            font-size: 2em;
-        }
+.hero h2 {
+    font-size: 40px;
+}
 
-        .products {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            padding: 40px;
-            flex-wrap: wrap;
-        }
+.hero button {
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: #f48fb1;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font-size: 16px;
+}
 
-        .product {
-            border: 1px solid #eee;
-            border-radius: 10px;
-            padding: 20px;
-            width: 250px;
-            text-align: center;
-        }
+/* PRODUCTS */
+.products {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 50px;
+}
 
-        .product img {
-            width: 100%;
-            border-radius: 10px;
-        }
+.card {
+    position: relative;
+    width: 280px;
+    height: 400px;
+    background: #111;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.4s;
+}
 
-        .product button {
-            background-color: #f48fb1;
-            color: white;
-            border: none;
-            padding: 10px;
-            margin-top: 10px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
+.card:hover {
+    transform: translateY(-10px);
+}
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #f8c8dc;
-            color: white;
-        }
-    </style>
+.circle {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: #f48fb1;
+    border-radius: 50%;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 50px #f48fb1, 0 0 100px #f48fb1;
+}
+
+.card img {
+    position: absolute;
+    width: 180px;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.content {
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.content h3 {
+    margin: 0;
+}
+
+.content p {
+    font-size: 14px;
+}
+
+.content a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #f48fb1;
+    border-radius: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+}
+</style>
 </head>
+
 <body>
 
 <header>
     <h1>PureGlow</h1>
-    <p>Révélez l'éclat naturel de votre peau</p>
+    <nav>
+        <a href="#">Accueil</a>
+        <a href="#">Produits</a>
+        <a href="#">Contact</a>
+    </nav>
 </header>
 
-<nav>
-    <a href="#">Accueil</a>
-    <a href="#">Produits</a>
-    <a href="#">Contact</a>
-</nav>
-
 <section class="hero">
-    <h2>Brosses nettoyantes visage</h2>
-    <p>Une peau propre, douce et lumineuse chaque jour ✨</p>
+    <h2>Révèle ton glow naturel ✨</h2>
+    <p>Des brosses visage pour une peau parfaite</p>
+    <button>Acheter maintenant</button>
 </section>
 
 <section class="products">
-    <div class="product">
-        <img src="https://via.placeholder.com/250" alt="Brosse visage">
-        <h3>Brosse PureGlow Pro</h3>
-        <p>Nettoyage en profondeur</p>
-        <p><strong>29,99€</strong></p>
-        <button>Acheter</button>
+
+    <div class="card">
+        <div class="circle"></div>
+        <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348">
+        <div class="content">
+            <h3>PureGlow Pro</h3>
+            <p>Nettoyage profond</p>
+            <a href="#">29,99€</a>
+        </div>
     </div>
 
-    <div class="product">
-        <img src="https://via.placeholder.com/250" alt="Brosse visage">
-        <h3>Brosse PureGlow Mini</h3>
-        <p>Compacte et pratique</p>
-        <p><strong>19,99€</strong></p>
-        <button>Acheter</button>
+    <div class="card">
+        <div class="circle"></div>
+        <img src="https://images.unsplash.com/photo-1600180758890-6b94519a8ba1">
+        <div class="content">
+            <h3>PureGlow Mini</h3>
+            <p>Compacte & pratique</p>
+            <a href="#">19,99€</a>
+        </div>
     </div>
+
 </section>
 
 <footer>
-    <p>© 2026 PureGlow - Tous droits réservés</p>
+    <p>© 2026 PureGlow</p>
 </footer>
 
 </body>
